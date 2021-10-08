@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="group">
+        {% for s in searched %}
+        <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+            <div class="card-header">{{s.id}}</div>
+            <div class="card-body">
+                <h5 class="card-title">{{s.question}}}</h5>
+                <h5 class="card-title">{{s.views}}</h5>
+                <p class="card-text">{{s.vote}}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}
